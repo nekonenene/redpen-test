@@ -29,8 +29,6 @@
             <property name="max_length" value="10" />
         </validator>
 
-        <!-- 同一の単語が連続して使用されたとき -->
-        <validator name="SuccessiveWord" />
         <!-- 二重否定の使用を検出 -->
         <validator name="DoubleNegative" />
         <!-- 送り仮名の誤用 -->
@@ -65,7 +63,6 @@
     </validators>
 
     <symbols>
-        <symbol name="MIDLINE_HORIZONTAL_ELLIPSIS" value="…" before-space="false" />
-        <symbol name="HALF_SPACE" value=" " before-space="false" />
+        <symbol name="SPACE" value=" " invalid-chars="　" />
     </symbols>
 </redpen-conf>
