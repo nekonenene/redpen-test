@@ -42,6 +42,8 @@
         <validator name="Okurigana"/>
         <!-- カタカナのスペルチェック -->
         <validator name="KatakanaSpellCheck" />
+        <!-- 同一の単語が連続して使用されている -->
+        <validator name="SuccessiveWord" />
 
         <!-- ***** 章や節に関する設定 ***** -->
         <!-- 章や節の中身が空である -->
