@@ -11,11 +11,11 @@
         <!-- ***** 一文の中での設定 ***** -->
         <!-- 一文の長さ -->
         <validator name="SentenceLength">
-            <property name="max_len" value="140" />
+            <property name="max_len" value="200" />
         </validator>
         <!-- 一文の読点（コンマ）の数 -->
         <validator name="CommaNumber">
-            <property name="max_num" value="3" />
+            <property name="max_num" value="5" />
         </validator>
         <!-- 「ですます調」と「だである調」が混在 -->
         <validator name="JapaneseStyle" />
@@ -24,9 +24,9 @@
             <!-- カッコのネスト -->
             <property name="max_nesting_level" value="2" />
             <!-- 一文内に存在していいカッコ -->
-            <property name="max_count" value="3" />
+            <property name="max_count" value="4" />
             <!-- カッコの中に含まれて良い単語数 -->
-            <property name="max_length" value="10" />
+            <property name="max_length" value="20" />
         </validator>
 
         <!-- ***** 読みやすい日本語か ***** -->
@@ -36,7 +36,7 @@
         <validator name="JapaneseAmbiguousNounConjunction" />
         <!-- 熟語の最大の長さ -->
         <validator name="LongKanjiChain">
-            <property name="max_len" value="5" />
+            <property name="max_len" value="8" />
         </validator>
         <!-- 送り仮名の誤用 -->
         <validator name="Okurigana"/>
@@ -47,7 +47,9 @@
         <!-- 章や節の中身が空である -->
         <validator name="VoidSection" />
         <!-- 1 つの章や節に含められる最大の段落数 : def=5 -->
-        <validator name="ParagraphNumber" />
+        <validator name="ParagraphNumber">
+            <property name="max_num" value="6" />
+        </validator>
         <!-- 1 つの章や節に含められる最大の単語数 -->
         <validator name="SectionLength">
             <property name="max_num" value="1500" />
@@ -72,5 +74,7 @@
         <symbol name="EXCLAMATION_MARK" value="！" invalid-chars="" />
         <symbol name="QUESTION_MARK" value="？" invalid-chars="" />
         <symbol name="TILDE" value="〜" invalid-chars="" />
+        <symbol name="HYPHEN_SIGN" value="ー" invalid-chars="" />
+        <symbol name="COLON" value=":" invalid-chars="" before-space="false" after-space="false" />
     </symbols>
 </redpen-conf>
