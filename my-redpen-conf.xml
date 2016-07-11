@@ -1,4 +1,4 @@
-<redpen-conf lang="ja" type="hankaku">
+<redpen-conf lang="ja">
     <validators>
         <!-- type="hankaku" に合わせた記号設定 -->
         <validator name="SymbolWithSpace" />
@@ -6,7 +6,7 @@
         <validator name="JapaneseStyle" />
         <!-- 一文の長さ -->
         <validator name="SentenceLength">
-            <property name="max_len" value="200" />
+            <property name="max_len" value="140" />
         </validator>
         <!-- 一文の読点（コンマ）の数 -->
         <validator name="CommaNumber">
@@ -15,6 +15,8 @@
 
         <!-- カタカナのスペルチェック -->
         <validator name="KatakanaSpellCheck" />
+        <!-- 半角カナの使用 -->
+        <validator name="HankakuKana" />
         <!-- アルファベット単語の前後に空白が存在するか -->
         <validator name="SpaceBetweenAlphabeticalWord" />
         <!-- カッコに関する規約 -->
@@ -31,8 +33,6 @@
         <validator name="SuccessiveWord" />
         <!-- 二重否定の使用を検出 -->
         <validator name="DoubleNegative" />
-        <!-- 半角カナの使用 -->
-        <validator name="HankakuKana" value="false" />
         <!-- 送り仮名の誤用 -->
         <validator name="Okurigana"/>
         <!-- 曖昧な名詞接続の検出 -->
@@ -60,8 +60,12 @@
         <!-- 章や節の数値表記を統一 -->
         <validator name="JapaneseAnchorExpression" />
 
-
         <!-- Load JavaScript validators -->
         <validator name="JavaScript" />
     </validators>
+
+    <symbols>
+        <symbol name="MIDLINE_HORIZONTAL_ELLIPSIS" value="…" before-space="false" />
+        <symbol name="HALF_SPACE" value=" " before-space="false" />
+    </symbols>
 </redpen-conf>
