@@ -9,6 +9,5 @@ dependencies:
 
 test:
   override:
-    - pwd
     - ls
-    - redpen-1.6.2/bin/redpen -c redpen-1.6.2/conf/redpen-conf-ja.xml *.md
+    - redpen-*/bin/redpen -c redpen-*/conf/redpen-conf-ja.xml *.md
