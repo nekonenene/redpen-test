@@ -1,7 +1,6 @@
 <redpen-conf lang="ja" type="hankaku">
     <validators>
         <!-- type="hankaku" に合わせた記号設定 -->
-        <validator name="InvalidSymbol" />
         <validator name="SymbolWithSpace" />
         <!-- 「ですます調」と「だである調」が混在 -->
         <validator name="JapaneseStyle" />
