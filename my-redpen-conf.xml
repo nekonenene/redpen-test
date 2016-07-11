@@ -15,8 +15,6 @@
 
         <!-- カタカナのスペルチェック -->
         <validator name="KatakanaSpellCheck" />
-        <!-- 半角カナの使用 -->
-        <validator name="HankakuKana" />
         <!-- アルファベット単語の前後に空白が存在するか -->
         <validator name="SpaceBetweenAlphabeticalWord" />
         <!-- カッコに関する規約 -->
