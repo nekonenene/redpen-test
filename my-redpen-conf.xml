@@ -1,9 +1,14 @@
 <redpen-conf lang="ja" type="hankaku">
     <validators>
-        <!-- type="hankaku" に合わせた記号設定 -->
+        <!-- ***** 半角文字に対する扱い ***** -->
+        <!-- 半角記号 ( type="hankaku" ) の使用 -->
+        <validator name="InvalidSymbol" />
+        <!-- 記号ごとに定められた前後のスペースについて -->
         <validator name="SymbolWithSpace" />
-        <!-- 「ですます調」と「だである調」が混在 -->
-        <validator name="JapaneseStyle" />
+        <!-- アルファベット単語の前後に空白が存在するか -->
+        <validator name="SpaceBetweenAlphabeticalWord" />
+
+        <!-- ***** 一文の中での設定 ***** -->
         <!-- 一文の長さ -->
         <validator name="SentenceLength">
             <property name="max_len" value="140" />
@@ -12,11 +17,8 @@
         <validator name="CommaNumber">
             <property name="max_num" value="3" />
         </validator>
-
-        <!-- カタカナのスペルチェック -->
-        <validator name="KatakanaSpellCheck" />
-        <!-- アルファベット単語の前後に空白が存在するか -->
-        <validator name="SpaceBetweenAlphabeticalWord" />
+        <!-- 「ですます調」と「だである調」が混在 -->
+        <validator name="JapaneseStyle" />
         <!-- カッコに関する規約 -->
         <validator name="ParenthesizedSentence">
             <!-- カッコのネスト -->
@@ -27,16 +29,19 @@
             <property name="max_length" value="10" />
         </validator>
 
+        <!-- ***** 読みやすい日本語か ***** -->
         <!-- 二重否定の使用を検出 -->
         <validator name="DoubleNegative" />
-        <!-- 送り仮名の誤用 -->
-        <validator name="Okurigana"/>
         <!-- 曖昧な名詞接続の検出 -->
         <validator name="JapaneseAmbiguousNounConjunction" />
         <!-- 熟語の最大の長さ -->
         <validator name="LongKanjiChain">
             <property name="max_len" value="5" />
         </validator>
+        <!-- 送り仮名の誤用 -->
+        <validator name="Okurigana"/>
+        <!-- カタカナのスペルチェック -->
+        <validator name="KatakanaSpellCheck" />
 
         <!-- ***** 章や節に関する設定 ***** -->
         <!-- 章や節の中身が空である -->
@@ -55,12 +60,17 @@
         <validator name="GappedSection" />
         <!-- 章や節の数値表記を統一 -->
         <validator name="JapaneseAnchorExpression" />
-
-        <!-- Load JavaScript validators -->
-        <validator name="JavaScript" />
     </validators>
 
     <symbols>
         <symbol name="SPACE" value=" " invalid-chars="　" />
+        <symbol name="FULL_STOP" value="。" invalid-chars="．" after-space="false" />
+        <symbol name="COMMA" value="、" invalid-chars="，" after-space="false" />
+        <symbol name="LEFT_PARENTHESIS" value="（" invalid-chars="" before-space="false" />
+        <symbol name="RIGHT_PARENTHESIS" value="）" invalid-chars="" after-space="false" />
+        <symbol name="PERCENT_SIGN" value="%" invalid-chars="" />
+        <symbol name="EXCLAMATION_MARK" value="！" invalid-chars="" />
+        <symbol name="QUESTION_MARK" value="？" invalid-chars="" />
+        <symbol name="TILDE" value="〜" invalid-chars="" />
     </symbols>
 </redpen-conf>
