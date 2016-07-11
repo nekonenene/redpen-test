@@ -32,7 +32,7 @@
         <!-- 二重否定の使用を検出 -->
         <validator name="DoubleNegative" />
         <!-- 半角カナの使用 -->
-        <validator name="HankakuKana" />
+        <validator name="HankakuKana" value="false" />
         <!-- 送り仮名の誤用 -->
         <validator name="Okurigana"/>
         <!-- 曖昧な名詞接続の検出 -->
