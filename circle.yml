@@ -10,4 +10,4 @@ dependencies:
 test:
   override:
     - ls
-    - redpen-*/bin/redpen -c redpen-*/conf/redpen-conf-ja.xml *.md
+    - redpen-*/bin/redpen -c ./my-redpen-conf.xml *.md

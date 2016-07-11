@@ -1,0 +1,68 @@
+<redpen-conf lang="ja" type="hankaku">
+    <validators>
+        <!-- type="hankaku" に合わせた記号設定 -->
+        <validator name="InvalidSymbol" />
+        <validator name="SymbolWithSpace" />
+        <!-- 「ですます調」と「だである調」が混在 -->
+        <validator name="JapaneseStyle" />
+        <!-- 一文の長さ -->
+        <validator name="SentenceLength">
+            <property name="max_len" value="200" />
+        </validator>
+        <!-- 一文の読点（コンマ）の数 -->
+        <validator name="CommaNumber">
+            <property name="max_num" value="3" />
+        </validator>
+
+        <!-- カタカナのスペルチェック -->
+        <validator name="KatakanaSpellCheck" />
+        <!-- アルファベット単語の前後に空白が存在するか -->
+        <validator name="SpaceBetweenAlphabeticalWord" />
+        <!-- カッコに関する規約 -->
+        <validator name="ParenthesizedSentence">
+            <!-- カッコのネスト -->
+            <property name="max_nesting_level" value="2" />
+            <!-- 一文内に存在していいカッコ -->
+            <property name="max_count" value="3" />
+            <!-- カッコの中に含まれて良い単語数 -->
+            <property name="max_length" value="10" />
+        </validator>
+
+        <!-- 同一の単語が連続して使用されたとき -->
+        <validator name="SuccessiveWord" />
+        <!-- 二重否定の使用を検出 -->
+        <validator name="DoubleNegative" />
+        <!-- 半角カナの使用 -->
+        <validator name="HankakuKana" />
+        <!-- 送り仮名の誤用 -->
+        <validator name="Okurigana"/>
+        <!-- 曖昧な名詞接続の検出 -->
+        <validator name="JapaneseAmbiguousNounConjunction" />
+        <!-- 熟語の最大の長さ -->
+        <validator name="LongKanjiChain">
+            <property name="max_len" value="5" />
+        </validator>
+
+        <!-- ***** 章や節に関する設定 ***** -->
+        <!-- 章や節の中身が空である -->
+        <validator name="VoidSection" />
+        <!-- 1 つの章や節に含められる最大の段落数 : def=5 -->
+        <validator name="ParagraphNumber" />
+        <!-- 1 つの章や節に含められる最大の単語数 -->
+        <validator name="SectionLength">
+            <property name="max_num" value="1500" />
+        </validator>
+        <!-- 章や節の最大深度 -->
+        <validator name="SectionLevel">
+            <property name="max_num" value="3" />
+        </validator>
+        <!-- 1 節の直下に 1.1.1 節があるなどの検出 -->
+        <validator name="GappedSection" />
+        <!-- 章や節の数値表記を統一 -->
+        <validator name="JapaneseAnchorExpression" />
+
+
+        <!-- Load JavaScript validators -->
+        <validator name="JavaScript" />
+    </validators>
+</redpen-conf>
