@@ -11,5 +11,4 @@ dependencies:
 
 test:
   post:
-    - redpen-1.6.2/bin/redpen -c redpen-1.6.2/conf/redpen-conf *.md
-    
+    - redpen-1.6.2/bin/redpen -c redpen-1.6.2/conf/redpen-conf-ja.xml *.md
