@@ -75,6 +75,5 @@
         <symbol name="QUESTION_MARK" value="？" invalid-chars="" />
         <symbol name="TILDE" value="〜" invalid-chars="" />
         <symbol name="HYPHEN_SIGN" value="ー" invalid-chars="" />
-        <symbol name="COLON" value=":" invalid-chars="" before-space="false" after-space="false" />
     </symbols>
 </redpen-conf>
