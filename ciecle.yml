@@ -1,7 +1,5 @@
 machine:
   timezone: Asia/Tokyo
-  java:
-    version: oraclejdk8
 
 dependencies:
   pre:
@@ -10,5 +8,7 @@ dependencies:
     - rm redpen-1.6.2.tar.gz
 
 test:
-  post:
+  override:
+    - pwd
+    - ls
     - redpen-1.6.2/bin/redpen -c redpen-1.6.2/conf/redpen-conf-ja.xml *.md
