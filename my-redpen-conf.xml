@@ -11,14 +11,12 @@
         <!-- ***** 一文の中での設定 ***** -->
         <!-- 一文の長さ -->
         <validator name="SentenceLength">
-            <property name="max_len" value="200" />
+            <property name="max_len" value="180" />
         </validator>
         <!-- 一文の読点（コンマ）の数 -->
         <validator name="CommaNumber">
             <property name="max_num" value="5" />
         </validator>
-        <!-- 「ですます調」と「だである調」が混在 -->
-        <validator name="JapaneseStyle" />
         <!-- カッコに関する規約 -->
         <validator name="ParenthesizedSentence">
             <!-- カッコのネスト -->
